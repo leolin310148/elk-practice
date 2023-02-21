@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    container_name: log-insert-py
+    networks:
+      - external_network
+
+networks:
+  external_network:
+    external:
+      name: docker-elk-823021_elk
